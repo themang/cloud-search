@@ -1,0 +1,27 @@
+{
+  "name": "@themang/cloud-search",
+  "description": "cloud search utility",
+  "repository": "git://github.com/themang/cloud-search.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "themang-cloud-search": "bin/cloud-search"
+  },
+  "dependencies": {
+    "@themang/profile": "^0.1.5",
+    "aws-sdk": "^2.1.44",
+    "bluebird": "^2.9.34",
+    "colors": "^1.1.2",
+    "commander": "^2.8.1",
+    "prettyjson": "^1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "2.x",
+    "standard": "^4.0.0"
+  },
+  "engines": {
+    "node": "~0.10.38",
+    "npm": "~2.9.0"
+  }
+}

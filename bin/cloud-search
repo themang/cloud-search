@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+var cs = require('..')
+var fs = require('fs')
+var profile = require('@themang/profile')
+var colors = require('colors')
+var prettyjson = require('prettyjson')
+
+program
+  .command('upload <domain> <file>')
+  .option('-p, --profile <name>', 'set profile name')
+  .description('upload documents to cloud search')
+  .action(function(domain, file, options) {
+
+    profile.load(options.profile)
+
+    var documents = fs.readFileSync(file)
+
+    console.log('Uploading documents from ' + file + ' ...')
+    cs.upload(domain, documents).then(handleSuccess, handleError)
+
+  })
+
+
+program.parse(process.argv)
+
+function handleSuccess(data) {
+  console.log('Success.'.green)
+  console.log(prettyjson.render(data, {
+    keysColor: 'grey'
+  }))
+}
+
+function handleError(err) {
+  console.log('Error.'.red)
+  console.error(err.cause.message)
+}

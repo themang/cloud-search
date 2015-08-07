@@ -1,0 +1,10 @@
+[
+  {
+    "type": "add",
+    "id": "test",
+    "fields": {
+      "content": "hello world",
+      "display_name": "test"
+    }
+  }
+]
