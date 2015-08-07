@@ -1,6 +1,6 @@
 [
   {
-    "type": "add",
+    "type": "delete",
     "id": "test",
     "fields": {
       "content": "hello world",

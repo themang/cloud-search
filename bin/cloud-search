@@ -15,7 +15,13 @@ program
 
     profile.load(options.profile)
 
-    var documents = fs.readFileSync(file)
+    var documents = null
+    try {
+      JSON.parse(file)
+      documents = file
+    } catch(e) {
+      documents = fs.readFileSync(file)
+    }
 
     console.log('Uploading documents from ' + file + ' ...')
     cs.upload(domain, documents).then(handleSuccess, handleError)
