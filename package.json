@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@themang/profile": "^0.1.5",
+    "@weo-edu/is": "^0.1.0",
     "aws-sdk": "^2.1.44",
     "bluebird": "^2.9.34",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
-    "prettyjson": "^1.1.2"
+    "mocha": "^2.2.5",
+    "prettyjson": "^1.1.2",
+    "standard": "^4.5.4"
   },
   "devDependencies": {
     "mocha": "2.x",
