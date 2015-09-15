@@ -9,6 +9,7 @@
     "themang-cloud-search": "bin/cloud-search"
   },
   "dependencies": {
+    "@themang/batch": "^0.1.3",
     "@themang/profile": "^0.1.5",
     "@weo-edu/is": "^0.1.0",
     "aws-sdk": "^2.1.44",
