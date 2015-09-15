@@ -3,7 +3,6 @@
 var program = require('commander')
 var cs = require('..')
 var fs = require('fs')
-var compose = require('compose-function')
 var awsExec = require('@themang/aws-exec')
 
 var colors = require('colors')
