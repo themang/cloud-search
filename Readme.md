@@ -1,7 +1,7 @@
 
 # cloud-search
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[ ![Codeship Status for themang/batch](https://img.shields.io/codeship/64a98540-328a-0133-f439-122db8266997/master.svg)](https://codeship.com/projects/99946)  [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 cloud search utility
 

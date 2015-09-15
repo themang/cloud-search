@@ -3,17 +3,18 @@
 var program = require('commander')
 var cs = require('..')
 var fs = require('fs')
-var profile = require('@themang/profile')
+var compose = require('compose-function')
+var awsExec = require('@themang/aws-exec')
+
 var colors = require('colors')
 var prettyjson = require('prettyjson')
 
+awsExec.bindAll(cs)
+
 program
   .command('upload <domain> <file>')
-  .option('-p, --profile <name>', 'set profile name')
   .description('upload documents to cloud search')
   .action(function(domain, file, options) {
-
-    profile.load(options.profile)
 
     var documents = null
     try {
@@ -27,7 +28,6 @@ program
     cs.upload(domain, documents).then(handleSuccess, handleError)
 
   })
-
 
 program.parse(process.argv)
 
