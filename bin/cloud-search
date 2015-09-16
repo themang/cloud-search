@@ -15,13 +15,7 @@ program
   .description('upload documents to cloud search')
   .action(function(domain, file, options) {
 
-    var documents = null
-    try {
-      JSON.parse(file)
-      documents = file
-    } catch(e) {
-      documents = fs.readFileSync(file)
-    }
+    var documents = JSON.parse(fs.readFileSync(file))
 
     console.log('Uploading documents from ' + file + ' ...')
     cs.upload(domain, documents).then(handleSuccess, handleError)
