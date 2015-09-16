@@ -2,7 +2,7 @@
   "name": "@themang/cloud-search",
   "description": "cloud search utility",
   "repository": "git://github.com/themang/cloud-search.git",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "license": "MIT",
   "main": "lib/index.js",
   "bin": {
